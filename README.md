@@ -1,14 +1,42 @@
-# Welcome to your CDK TypeScript project!
+# CDK Fargate Cluster
 
-This is a blank project for TypeScript development with CDK.
+### 1 Install Docker for your environment
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+https://www.docker.com/products/docker-desktop
 
-## Useful commands
+### 2 Install the AWS CDK
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html#getting_started_install
+
+
+### 3 Configure your AWS environment
+
+Run `aws configure` or authenticate using SSO environment variables.
+
+Verify: `aws s3 ls`
+
+### 4 Initialize a typescript CDK Project
+
+Create a new directory and open a terminal in it.
+
+Run: `cdk init app --language typescript`
+
+### 5 Create a `src` Directory
+
+`mkdir src`
+
+Continue to directions in `src/`
+
+
+### 6 Install CDK Dependencies
+
+Return to root directory (this one).
+
+Install the deps
+
+```
+npm install @aws-cdk/aws-ec2
+npm install @aws-cdk/aws-ecs
+npm install @aws-cdk/aws-ecr
+npm install @aws-cdk/aws-ecs-patterns
+```
